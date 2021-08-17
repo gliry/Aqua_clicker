@@ -1,10 +1,11 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
+#include <QQmlContext>
 #include <QLocale>
 #include <QTranslator>
 #include <QQuickView>
 #include <QObject>
+#include "AppCore.h"
 
 int main(int argc, char *argv[])
 {
@@ -24,7 +25,16 @@ int main(int argc, char *argv[])
         }
     }
 
+    AppCore appCore;
+
     QQmlApplicationEngine engine;
+    QQmlContext *context = engine.rootContext();
+
+    /* Загружаем объект в контекст для установки соединения,
+     * а также определяем имя "appCore", по которому будет происходить соединение
+     * */
+    context->setContextProperty("appCore", &appCore);
+
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
@@ -32,6 +42,7 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
+
 
 
 

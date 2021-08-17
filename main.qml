@@ -28,18 +28,29 @@ ApplicationWindow
         transformOrigin: Item.Center
         signal monsterClicked
         background: transientParent
+        onClicked: appCore.receiveFromQml()
 
         Image
         {
             id: crab
             anchors.fill: parent
             source: btn_crab.pressed? "qrc:/img/img/Crab.png" : "qrc:/img/img/Jellyfish.png";
-
         }
-
-
-
     }
+    Connections {
+        target: appCore
+        onSendToQml: {
+            labelCount.text = count
+        }
+    }
+    Label {
+           id: labelCount
+           text: "0"
+
+           anchors.bottom: parent.verticalCenter
+           anchors.horizontalCenter: parent.horizontalCenter
+           anchors.bottomMargin: 15
+       }
 }
 
 /*##^##
