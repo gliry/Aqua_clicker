@@ -9,15 +9,22 @@ class AppCore : public QObject
     Q_OBJECT
 public:
     explicit AppCore(QObject *parent = nullptr);
+    void set_life(int new_life);
+    void set_counter_change(int new_counter_change);
 
 signals:
     void sendToQml(int count);
+    void monsterKilled(QString name_new_monster);
 
 public slots:
     void receiveFromQml();
 
+
 private:
-    int m_counter {0};
+    unsigned long long m_counter {0};
+    unsigned long long life {0};
+    unsigned long long counter_change {1};
+    QString name_new_monster;
 };
 
 #endif // APPCORE_H

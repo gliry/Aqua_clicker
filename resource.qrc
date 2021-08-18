@@ -4,9 +4,9 @@
         <file>img/Crab.png</file>
         <file>img/Jellyfish.png</file>
         <file>img/Bubble_1.png</file>
-        <file>fonts/Astakhov First Simple.ttf</file>
         <file>fonts/neuropol.ttf</file>
-        <file>fonts/OpenSansCondensed-Bold.ttf</file>
+        <file>img/Crab_2.png</file>
+        <file>img/Jellyfish_2.png</file>
     </qresource>
     <qresource prefix="/font"/>
 </RCC>
