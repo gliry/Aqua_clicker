@@ -45,7 +45,7 @@ ApplicationWindow
                 AngleDirection
                 {
                     angle: 270
-                    angleVariation: 30
+                    angleVariation: 20
                     magnitude: 100
                 }
         }
@@ -76,32 +76,59 @@ ApplicationWindow
                 AngleDirection
                 {
                     angle: 270
-                    angleVariation: 30
+                    angleVariation: 20
                     magnitude: 100
                 }
         }
     }
 
-    Item{
-
+    Item
+    {
+        width: parent.width
+        height: parent.width
         Button
         {
-            id: btn_crab
-            y: 40
-            width: 400
-            height: 400
+            id: monster_btn
+
+            width: parent.width
+            height: parent.width
             anchors.verticalCenter: parent.verticalCenter
-            anchors.horizontalCenter: background.horizontalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
 
             Image
             {
-                id: crab
+                id: monster
                 anchors.fill: parent
-                source: btn_crab.pressed? "qrc:/img/img/Crab.png" : "qrc:/img/img/Jellyfish.png"
+                source: "qrc:/img/img/Jellyfish_2.png"
+                states:
+                [
+                    State
+                    {
+                        name: "Crab"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Crab.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish.png"
+                        }
+                    }
+                ]
             }
             transformOrigin: Item.Center
             background: transientParent
-            onClicked: appCore.receiveFromQml()
+            onClicked:
+            {
+                appCore.receiveFromQml()
+            }
         }
 
         SequentialAnimation on y
@@ -109,12 +136,12 @@ ApplicationWindow
             loops: Animation.Infinite
 
             NumberAnimation {
-                from: 350; to: 450
+                from: 150; to: 250
                 easing.type: Easing.InOutCirc; duration: 700
             }
 
             NumberAnimation {
-                from: 450; to: 350
+                from: 250; to: 150
                 easing.type: Easing.InOutCirc; duration: 700
             }
         }
@@ -123,9 +150,13 @@ ApplicationWindow
     Connections
     {
         target: appCore
-        onSendToQml:
+        function onSendToQml(count)
         {
             now_points.text = count
+        }
+        function onMonsterKilled(name_new_monster)
+        {
+            monster.state = name_new_monster
         }
     }
 

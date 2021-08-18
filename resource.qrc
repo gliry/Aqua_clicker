@@ -5,6 +5,8 @@
         <file>img/Jellyfish.png</file>
         <file>img/Bubble_1.png</file>
         <file>fonts/neuropol.ttf</file>
+        <file>img/Crab_2.png</file>
+        <file>img/Jellyfish_2.png</file>
     </qresource>
     <qresource prefix="/font"/>
 </RCC>
