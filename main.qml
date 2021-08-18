@@ -4,14 +4,10 @@ import QtQuick.Controls 2.5;
 import QtQuick.Layouts 1.3;
 
 
-
-
 ApplicationWindow
 {
     id: window
     visible: true
-    property alias now_pointsFontfamily: now_points.font.family
-    property alias need_pointsFontfamily: need_points.font.family
     width: 400
     height: 800
 
@@ -27,10 +23,12 @@ ApplicationWindow
     ParticleSystem
     {
         id: particles_1
+
         ImageParticle
         {
             source: "qrc:/img/img/Bubble_1.png"
         }
+
         Emitter
         {
             // @disable-check M16
@@ -52,13 +50,16 @@ ApplicationWindow
                 }
         }
     }
+
     ParticleSystem
     {
         id: particles_2
+
         ImageParticle
         {
             source: "qrc:/img/img/Bubble_1.png"
         }
+
         Emitter
         {
             // @disable-check M16
@@ -80,7 +81,9 @@ ApplicationWindow
                 }
         }
     }
+
     Item{
+
         Button
         {
             id: btn_crab
@@ -89,6 +92,7 @@ ApplicationWindow
             height: 400
             anchors.verticalCenter: parent.verticalCenter
             anchors.horizontalCenter: background.horizontalCenter
+
             Image
             {
                 id: crab
@@ -99,17 +103,16 @@ ApplicationWindow
             background: transientParent
             onClicked: appCore.receiveFromQml()
         }
+
         SequentialAnimation on y
         {
             loops: Animation.Infinite
 
-            // Move from minHeight to maxHeight in 300ms, using the OutExpo easing function
             NumberAnimation {
                 from: 350; to: 450
                 easing.type: Easing.InOutCirc; duration: 700
             }
 
-            // Then move back to minHeight in 1 second, using the OutBounce easing function
             NumberAnimation {
                 from: 450; to: 350
                 easing.type: Easing.InOutCirc; duration: 700
@@ -117,48 +120,41 @@ ApplicationWindow
         }
     }
 
-
-    Connections {
+    Connections
+    {
         target: appCore
-        onSendToQml: {
-                now_points.text = count
-            }
+        onSendToQml:
+        {
+            now_points.text = count
+        }
     }
 
-    Label {
-        id: now_points
-        x: 200
-        y: 100
-        width: 50
-        text: "0"
-        anchors.verticalCenter: need_points.verticalCenter
-        font.pixelSize: 50
-        horizontalAlignment: Text.AlignRight
-        verticalAlignment: Text.AlignTop
-        font.kerning: true
-        font.weight: Font.Normal
-        font.bold: false
-        anchors.horizontalCenterOffset: -60
-        anchors.horizontalCenter: background.horizontalCenter
-        font.capitalization: Font.AllUppercase
-        textFormat: Text.AutoText
-        font.family: "Open Sans Condensed"
+    Item
+    {
+        id: item1
+        width: parent.width
+        height: 50
 
+        Label
+        {
+            id: now_points
+            text: "0"
+            anchors.top: parent.top
+            font.pixelSize: 40
+            anchors.topMargin: 60
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.kerning: true
+            font.weight: Font.Normal
+            font.bold: false
+            font.capitalization: Font.AllUppercase
+            textFormat: Text.AlignVCenter
+            font.family: new_font.name
+        }
     }
 
-    Label {
-        id: need_points
-        y: 100
-        width: 50
-        text: " / 1000"
-        anchors.left: now_points.right
-        font.pixelSize: 50
-        horizontalAlignment: Text.AlignRight
-        font.bold: false
-        anchors.leftMargin: 110
-        font.capitalization: Font.AllUppercase
-        font.weight: Font.Normal
-        font.family: "Open Sans Condensed"
+    FontLoader {
+        id: new_font
+        source: "qrc:/img/fonts/neuropol.ttf"
     }
 }
 
