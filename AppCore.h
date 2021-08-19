@@ -19,12 +19,12 @@ signals:
 public slots:
     void receiveFromQml();
 
-
 private:
     unsigned long long m_counter {0};
     unsigned long long life {0};
     unsigned long long counter_change {1};
     QString name_new_monster;
+    QVector<QPair<QString, unsigned long long>> monster_data;
 };
 
 #endif // APPCORE_H

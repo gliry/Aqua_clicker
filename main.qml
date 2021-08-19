@@ -120,6 +120,26 @@ ApplicationWindow
                             target: monster
                             source: "qrc:/img/img/Jellyfish.png"
                         }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail.png"
+                        }
                     }
                 ]
             }
