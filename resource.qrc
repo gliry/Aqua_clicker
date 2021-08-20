@@ -7,6 +7,8 @@
         <file>fonts/neuropol.ttf</file>
         <file>img/Crab_2.png</file>
         <file>img/Jellyfish_2.png</file>
+        <file>img/Shrimp.png</file>
+        <file>img/Snail.png</file>
     </qresource>
     <qresource prefix="/font"/>
 </RCC>

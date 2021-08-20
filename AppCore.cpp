@@ -3,7 +3,7 @@
 
 AppCore::AppCore(QObject* parent) : QObject(parent)
 {
-
+    monster_data = {{"Crab", 10}, {"Jellyfish", 5}, {"Shrimp", 7}, {"Snail", 15}};
 }
 
 void AppCore::receiveFromQml()
@@ -13,26 +13,10 @@ void AppCore::receiveFromQml()
     if (m_counter >  life)
     {
         m_counter = 0;
-        int id_new_monster = rand() % 2;
-        if(id_new_monster == 0)
-        {
-            name_new_monster = "Crab";
-        }
-        else
-        {
-            name_new_monster = "Jellyfish";
-        }
-
+        int id_new_monster = rand() % 4;
+        name_new_monster = monster_data[id_new_monster].first;
+        life = monster_data[id_new_monster].second;
         emit monsterKilled(name_new_monster);
-
-        if (id_new_monster == 0)
-        {
-            life = 10;
-        }
-        else
-        {
-            life = 5;
-        }
     }
     emit sendToQml(m_counter);
 }
@@ -46,3 +30,5 @@ void AppCore::set_counter_change(int new_counter_change)
 {
     counter_change = new_counter_change;
 }
+
+

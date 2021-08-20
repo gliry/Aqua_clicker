@@ -84,6 +84,7 @@ ApplicationWindow
 
     Item
     {
+        id: monster_item
         width: parent.width
         height: parent.width
         Button
@@ -120,6 +121,26 @@ ApplicationWindow
                             target: monster
                             source: "qrc:/img/img/Jellyfish.png"
                         }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail.png"
+                        }
                     }
                 ]
             }
@@ -134,15 +155,134 @@ ApplicationWindow
         SequentialAnimation on y
         {
             loops: Animation.Infinite
+            id: infinity_animation
 
-            NumberAnimation {
+            NumberAnimation
+            {
                 from: 150; to: 250
-                easing.type: Easing.InOutCirc; duration: 700
+                easing.type: Easing.InOutCirc
+                duration: 700
             }
 
-            NumberAnimation {
+            NumberAnimation
+            {
                 from: 250; to: 150
-                easing.type: Easing.InOutCirc; duration: 700
+                easing.type: Easing.InOutCirc
+                duration: 700
+            }
+        }
+
+
+        SequentialAnimation
+        {
+            id: killing_animation
+            ScriptAction
+            {
+                script: infinity_animation.pause()
+            }
+
+            ParallelAnimation
+            {
+                NumberAnimation
+                {
+                    target: monster_item
+                    property: "scale"
+                    from: 1.0; to: 0.2
+                    duration: 500
+                }
+
+                NumberAnimation
+                {
+                    target: monster_item
+                    property: "opacity"
+                    from: 1.0; to: 0.0
+                    duration: 500
+                }
+
+                NumberAnimation {
+                    target: monster_item
+                    property: "rotation"
+                    from: 0; to: 180
+                    duration: 500
+                }
+
+                XAnimator
+                {
+                    target: monster_item
+                    to: 100
+                    duration: 500
+                    easing.type: Easing.InOutCirc
+                }
+
+                YAnimator
+                {
+                    target: monster_item
+                    to: 600
+                    duration: 500
+                    easing.type: Easing.InOutCirc
+                }
+            }
+
+            ScriptAction
+            {
+                script:
+                {
+                    monster.state = store.text
+                    creating_animation.running = true;
+                }
+            }
+        }
+        SequentialAnimation
+        {
+            id: creating_animation
+
+            ParallelAnimation
+            {
+                NumberAnimation
+                {
+                    target: monster_item
+                    property: "scale"
+                    from: 0.2; to: 1.0
+                    duration: 500
+                }
+
+                NumberAnimation
+                {
+                    target: monster_item
+                    property: "opacity"
+                    from: 0.2; to: 1.0
+                    duration: 500
+                }
+
+
+                NumberAnimation {
+                    target: monster_item
+                    property: "rotation"
+                    from: 180; to: 360
+                    duration: 500
+                }
+
+                XAnimator
+                {
+                    target: monster_item
+                    from: 100
+                    to: 0
+                    duration: 500
+                    easing.type: Easing.InOutCirc
+                }
+
+                YAnimator
+                {
+                    target: monster_item
+                    from: 600
+                    to: 200
+                    duration: 500
+                    easing.type: Easing.InOutCirc
+                }
+            }
+            ScriptAction
+            {
+                script: infinity_animation.resume()
             }
         }
     }
@@ -156,7 +296,9 @@ ApplicationWindow
         }
         function onMonsterKilled(name_new_monster)
         {
-            monster.state = name_new_monster
+            killing_animation.running = true
+            store.text = name_new_monster
+
         }
     }
 
@@ -186,6 +328,12 @@ ApplicationWindow
     FontLoader {
         id: new_font
         source: "qrc:/img/fonts/neuropol.ttf"
+    }
+
+    Text {
+        id: store
+        text: qsTr("")
+        visible: false
     }
 }
 
