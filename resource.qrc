@@ -9,6 +9,7 @@
         <file>img/Jellyfish_2.png</file>
         <file>img/Shrimp.png</file>
         <file>img/Snail.png</file>
+        <file>img/Chest.png</file>
     </qresource>
     <qresource prefix="/font"/>
 </RCC>

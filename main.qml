@@ -41,6 +41,7 @@ ApplicationWindow
             lifeSpan: 12000
             sizeVariation: 16
             emitRate: 10
+            startTime: 10000
             velocity:
                 AngleDirection
                 {
@@ -72,6 +73,7 @@ ApplicationWindow
             lifeSpan: 12000
             sizeVariation: 16
             emitRate: 10
+            startTime: 10000
             velocity:
                 AngleDirection
                 {
@@ -90,7 +92,7 @@ ApplicationWindow
         Button
         {
             id: monster_btn
-
+            enabled: true
             width: parent.width
             height: parent.width
             anchors.verticalCenter: parent.verticalCenter
@@ -178,8 +180,13 @@ ApplicationWindow
             id: killing_animation
             ScriptAction
             {
-                script: infinity_animation.pause()
+                script:
+                {
+                    infinity_animation.pause()
+                    monster_btn.enabled = false
+                }
             }
+
 
             ParallelAnimation
             {
@@ -282,7 +289,11 @@ ApplicationWindow
             }
             ScriptAction
             {
-                script: infinity_animation.resume()
+                script:
+                {
+                    infinity_animation.resume()
+                    monster_btn.enabled = true
+                }
             }
         }
     }
