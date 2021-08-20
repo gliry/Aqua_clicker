@@ -10,6 +10,7 @@
         <file>img/Shrimp.png</file>
         <file>img/Snail.png</file>
         <file>img/Chest.png</file>
+        <file>img/Exit.png</file>
     </qresource>
     <qresource prefix="/font"/>
 </RCC>

@@ -89,6 +89,7 @@ ApplicationWindow
         id: monster_item
         width: parent.width
         height: parent.width
+        z: 3
         Button
         {
             id: monster_btn
@@ -239,6 +240,7 @@ ApplicationWindow
                 }
             }
         }
+
         SequentialAnimation
         {
             id: creating_animation
@@ -298,6 +300,139 @@ ApplicationWindow
         }
     }
 
+    Item
+    {
+        id: chest_item
+        width: parent.width / 3
+        height: parent.width / 3
+        anchors.right: background.right
+        anchors.bottom: background.bottom
+        anchors.bottomMargin: 0
+        anchors.rightMargin: 20
+        z: 2
+
+        Button
+        {
+            id: chest_btn
+            enabled: true
+            width: parent.width
+            height: parent.width
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Image
+            {
+                id: chest_img
+                anchors.fill: parent
+                source: "qrc:/img/img/Chest.png"
+            }
+            transformOrigin: Item.Center
+            background: transientParent
+            onClicked:
+            {
+                inventory.visible = true
+                monster_btn.enabled = false
+                counter_points.visible = false
+                timer_chest_anim.running = false
+            }
+        }
+
+        SequentialAnimation
+        {
+            id: chest_anim
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: 0; to: 20
+                duration: 200
+            }
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: 20; to: -20
+                duration: 200
+            }
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: -20; to: 20
+                duration: 200
+            }
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: 20; to: -20
+                duration: 200
+            }
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: -20; to: 0
+                duration: 200
+            }
+        }
+    }
+
+    Item
+    {
+        Timer
+        {
+            id: timer_chest_anim
+            interval: 5000; running: true; repeat: true
+            onTriggered: chest_anim.running = true
+        }
+    }
+
+
+
+    Rectangle
+    {
+        id: inventory
+        width: parent.width * 0.9
+        height: parent.height * 0.95
+        color: "white"
+        opacity: 0.8
+        visible: false
+        border.width: 4
+        anchors.verticalCenter: background.verticalCenter
+        anchors.horizontalCenter: background.horizontalCenter
+        radius: 40
+        z: 4
+
+        Button
+        {
+            id: exit_btn
+            enabled: true
+            width: parent.width / 7
+            height: parent.width / 7
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.rightMargin: 20
+            anchors.topMargin: 20
+
+            Image
+            {
+                id: exit_img
+                anchors.fill: parent
+                source: "qrc:/img/img/Exit.png"
+            }
+            transformOrigin: Item.Center
+            background: transientParent
+            onClicked:
+            {
+                inventory.visible = false
+                monster_btn.enabled = true
+                counter_points.visible = true
+                timer_chest_anim.running = true
+            }
+        }
+    }
+
     Connections
     {
         target: appCore
@@ -315,9 +450,10 @@ ApplicationWindow
 
     Item
     {
-        id: item1
+        id: counter_points
         width: parent.width
         height: 50
+        visible: true
 
         Label
         {

@@ -17,7 +17,6 @@ void AppCore::receiveFromQml()
     if (m_counter >  life)
     {
         m_counter = 0;
-
         int id_new_monster = randomize_monster();
         name_new_monster = monster_data[id_new_monster].first;
         life = monster_data[id_new_monster].second;
