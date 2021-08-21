@@ -2,6 +2,7 @@
 #define APPCORE_H
 
 #include <QObject>
+#include <QMap>
 
 
 class AppCore : public QObject
@@ -21,13 +22,16 @@ public slots:
 
 private:
     int randomize_monster();
+    int randomize_rarity();
 
     unsigned long long m_counter {0};
     unsigned long long life {0};
     unsigned long long counter_change {1};
     int random_number {0};
     QString name_new_monster;
-    QVector<QPair<QString, unsigned long long>> monster_data;
+    QVector<QVector<QPair<QString, unsigned long long>>> monster_data;
+    QMap<QString, int> monster_counter;
+    QVector<QString> rarity_data;
 };
 
 #endif // APPCORE_H

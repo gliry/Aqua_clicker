@@ -38,6 +38,24 @@
         <file>img/Shrimp_rare.png</file>
         <file>img/Shrimp_silver.png</file>
         <file>img/Shrimp_uncommon.png</file>
+        <file>img/Snail_common.png</file>
+        <file>img/Snail_epic.png</file>
+        <file>img/Snail_gold.png</file>
+        <file>img/Snail_immortal.png</file>
+        <file>img/Snail_legendary.png</file>
+        <file>img/Snail_mythical.png</file>
+        <file>img/Snail_rare.png</file>
+        <file>img/Snail_silver.png</file>
+        <file>img/Snail_uncommon.png</file>
+        <file>img/Turtle_common.png</file>
+        <file>img/Turtle_epic.png</file>
+        <file>img/Turtle_gold.png</file>
+        <file>img/Turtle_immortal.png</file>
+        <file>img/Turtle_legendary.png</file>
+        <file>img/Turtle_mythical.png</file>
+        <file>img/Turtle_rare.png</file>
+        <file>img/Turtle_silver.png</file>
+        <file>img/Turtle_uncommon.png</file>
     </qresource>
     <qresource prefix="/font"/>
 </RCC>

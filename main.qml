@@ -108,43 +108,454 @@ ApplicationWindow
                 [
                     State
                     {
-                        name: "Crab"
+                        name: "Crab_common"
                         PropertyChanges
                         {
                             target: monster
-                            source: "qrc:/img/img/Crab.png"
+                            source: "qrc:/img/img/Crab_common.png"
                         }
                     },
 
                     State
                     {
-                        name: "Jellyfish"
+                        name: "Crab_uncommon"
                         PropertyChanges
                         {
                             target: monster
-                            source: "qrc:/img/img/Jellyfish.png"
+                            source: "qrc:/img/img/Crab_uncommon.png"
                         }
                     },
 
                     State
                     {
-                        name: "Shrimp"
+                        name: "Crab_rare"
                         PropertyChanges
                         {
                             target: monster
-                            source: "qrc:/img/img/Shrimp.png"
+                            source: "qrc:/img/img/Crab_rare.png"
                         }
                     },
 
                     State
                     {
-                        name: "Snail"
+                        name: "Crab_mythical"
                         PropertyChanges
                         {
                             target: monster
-                            source: "qrc:/img/img/Snail.png"
+                            source: "qrc:/img/img/Crab_mythical.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Crab_epic"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Crab_epic.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Crab_legendary"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Crab_legendary.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Crab_immortal"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Crab_immortal.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Crab_silver"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Crab_silver.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Crab_gold"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Crab_gold.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_common"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_common.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_uncommon"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_uncommon.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_rare"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_rare.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_mythical"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_mythical.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_epic"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_epic.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_legendary"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_legendary.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_immortal"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_immortal.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_silver"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_silver.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Jellyfish_gold"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Jellyfish_gold.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_common"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_common.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_uncommon"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_uncommon.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_rare"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_rare.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_mythical"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_mythical.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_epic"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_epic.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_legendary"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_legendary.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_immortal"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_immortal.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_silver"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_silver.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Shrimp_gold"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Shrimp_gold.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_common"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_common.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_uncommon"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_uncommon.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_rare"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_rare.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_mythical"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_mythical.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_epic"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_epic.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_legendary"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_legendary.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_immortal"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_immortal.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_silver"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_silver.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Snail_gold"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Snail_gold.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_common"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_common.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_uncommon"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_uncommon.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_rare"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_rare.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_mythical"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_mythical.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_epic"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_epic.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_legendary"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_legendary.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_immortal"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_immortal.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_silver"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_silver.png"
+                        }
+                    },
+
+                    State
+                    {
+                        name: "Turtle_gold"
+                        PropertyChanges
+                        {
+                            target: monster
+                            source: "qrc:/img/img/Turtle_gold.png"
                         }
                     }
+
                 ]
             }
             transformOrigin: Item.Center
@@ -432,108 +843,243 @@ ApplicationWindow
             }
         }
 
-        Rectangle
-        {
-            id: rect_tresure
-            width: parent.width * 0.9
-            height: parent.height * 0.9 - 19
-            color: "transparent"
-            radius: 20
-            anchors.top: parent.top
-            anchors.topMargin: 80
-            anchors.horizontalCenter: parent.horizontalCenter
 
-            ListView
+            Rectangle
             {
-                id: inventory_treasure_crab
-                width: parent.width
-                height: parent.height
-                anchors.left: parent.left
+                id: rect_tresure
+                width: parent.width * 0.9
+                height: parent.height * 0.9 - 19
+                color: "transparent"
+                radius: 20
                 anchors.top: parent.top
-                anchors.topMargin: 0
-                anchors.leftMargin: 0
-                orientation: ListView.Horizontal
-                spacing: 10
-                clip: true
-                model: ["qrc:/img/img/Crab_common.png", "qrc:/img/img/Crab_uncommon.png",
-                "qrc:/img/img/Crab_rare.png", "qrc:/img/img/Crab_mythical.png", "qrc:/img/img/Crab_epic.png",
-                "qrc:/img/img/Crab_legendary.png", "qrc:/img/img/Crab_immortal.png", "qrc:/img/img/Crab_silver.png",
-                "qrc:/img/img/Crab_gold.png"]
-                delegate:
-                    Rectangle
-                    {
-                        width: ListView.view.width / 4
-                        height: ListView.view.width / 4
-                        border.width: 3
-                        radius: 20
-                        border.color: "black"
-                        Image
-                        {
-                            width: parent.width * 0.8
-                            height: parent.width * 0.8
-                            anchors.top: parent.top
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            source: modelData
-                        }
-                        Text
-                        {
-                            anchors.bottom: parent.bottom
-                            anchors.bottomMargin: 5
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            text: qsTr("12345")
-                        }
-                    }
-            }
+                anchors.topMargin: 80
+                anchors.horizontalCenter: parent.horizontalCenter
 
-            ListView
-            {
-                id: inventory_treasure_jellyfish
-                width: parent.width
-                height: parent.height
-                anchors.top: parent.top
-                anchors.topMargin: 100
-                orientation: ListView.Horizontal
-                spacing: 10
-                clip: true
-                model: ["qrc:/img/img/Jellyfish_common.png", "qrc:/img/img/Jellyfish_uncommon.png",
-                "qrc:/img/img/Jellyfish_rare.png", "qrc:/img/img/Jellyfish_mythical.png", "qrc:/img/img/Jellyfish_epic.png",
-                "qrc:/img/img/Jellyfish_legendary.png", "qrc:/img/img/Jellyfish_immortal.png", "qrc:/img/img/Jellyfish_silver.png",
-                "qrc:/img/img/Jellyfish_gold.png"]
-                delegate:
-                    Rectangle
-                    {
-                        width: ListView.view.width / 4
-                        height: ListView.view.width / 4
-                        border.width: 3
-                        radius: 20
-                        border.color: "black"
-                        Image
-                        {
-                            width: parent.width * 0.8
-                            height: parent.width * 0.8
-                            anchors.top: parent.top
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            source: modelData
-                        }
-                        Text
-                        {
-                            anchors.bottom: parent.bottom
-                            anchors.bottomMargin: 5
-                            anchors.horizontalCenter: parent.horizontalCenter
-                            text: qsTr("12345")
-                        }
-                    }
-            }
 
+                ListView
+                {
+                    id: inventory_treasure_crab
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 0
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Crab_common.png", "qrc:/img/img/Crab_uncommon.png",
+                    "qrc:/img/img/Crab_rare.png", "qrc:/img/img/Crab_mythical.png", "qrc:/img/img/Crab_epic.png",
+                    "qrc:/img/img/Crab_legendary.png", "qrc:/img/img/Crab_immortal.png", "qrc:/img/img/Crab_silver.png",
+                    "qrc:/img/img/Crab_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_jellyfish
+                    width: parent.width
+                    height: parent.height
+                    anchors.top: parent.top
+                    anchors.topMargin: 90
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Jellyfish_common.png", "qrc:/img/img/Jellyfish_uncommon.png",
+                    "qrc:/img/img/Jellyfish_rare.png", "qrc:/img/img/Jellyfish_mythical.png", "qrc:/img/img/Jellyfish_epic.png",
+                    "qrc:/img/img/Jellyfish_legendary.png", "qrc:/img/img/Jellyfish_immortal.png", "qrc:/img/img/Jellyfish_silver.png",
+                    "qrc:/img/img/Jellyfish_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 180
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_snail
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 270
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Snail_common.png", "qrc:/img/img/Snail_uncommon.png",
+                    "qrc:/img/img/Snail_rare.png", "qrc:/img/img/Snail_mythical.png", "qrc:/img/img/Snail_epic.png",
+                    "qrc:/img/img/Snail_legendary.png", "qrc:/img/img/Snail_immortal.png", "qrc:/img/img/Snail_silver.png",
+                    "qrc:/img/img/Snail_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_turtle
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 360
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Turtle_common.png", "qrc:/img/img/Turtle_uncommon.png",
+                    "qrc:/img/img/Turtle_rare.png", "qrc:/img/img/Turtle_mythical.png", "qrc:/img/img/Turtle_epic.png",
+                    "qrc:/img/img/Turtle_legendary.png", "qrc:/img/img/Turtle_immortal.png", "qrc:/img/img/Turtle_silver.png",
+                    "qrc:/img/img/Turtle_gold.png"]
+
+
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+            }
         }
-    }
+
+
+
+
 
     Connections
     {
         target: appCore
-        function onSendToQml(count)
+        function onSendToQml(count, monster_count)
         {
             now_points.text = count
+
+
         }
         function onMonsterKilled(name_new_monster)
         {
@@ -587,5 +1133,341 @@ Designer {
 
 
 /*
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 200
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp_2
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 300
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp_3
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 400
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp_4
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 500
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp_5
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 600
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp_6
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 700
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp_7
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 800
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
+
+                ListView
+                {
+                    id: inventory_treasure_shrimp_8
+                    width: parent.width
+                    height: parent.height
+                    anchors.left: parent.left
+                    anchors.top: parent.top
+                    anchors.topMargin: 900
+                    anchors.leftMargin: 0
+                    orientation: ListView.Horizontal
+                    spacing: 10
+                    clip: true
+                    model: ["qrc:/img/img/Shrimp_common.png", "qrc:/img/img/Shrimp_uncommon.png",
+                    "qrc:/img/img/Shrimp_rare.png", "qrc:/img/img/Shrimp_mythical.png", "qrc:/img/img/Shrimp_epic.png",
+                    "qrc:/img/img/Shrimp_legendary.png", "qrc:/img/img/Shrimp_immortal.png", "qrc:/img/img/Shrimp_silver.png",
+                    "qrc:/img/img/Shrimp_gold.png"]
+                    delegate:
+                        Rectangle
+                        {
+                            width: ListView.view.width / 4
+                            height: ListView.view.width / 4
+                            border.width: 3
+                            radius: 20
+                            border.color: "black"
+                            Image
+                            {
+                                width: parent.width * 0.8
+                                height: parent.width * 0.8
+                                anchors.top: parent.top
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                source: modelData
+                            }
+                            Text
+                            {
+                                anchors.bottom: parent.bottom
+                                anchors.bottomMargin: 5
+                                anchors.horizontalCenter: parent.horizontalCenter
+                                text: qsTr("12345")
+                            }
+                        }
+                }
 
   */
