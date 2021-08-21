@@ -431,6 +431,101 @@ ApplicationWindow
                 timer_chest_anim.running = true
             }
         }
+
+        Rectangle
+        {
+            id: rect_tresure
+            width: parent.width * 0.9
+            height: parent.height * 0.9 - 19
+            color: "transparent"
+            radius: 20
+            anchors.top: parent.top
+            anchors.topMargin: 80
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            ListView
+            {
+                id: inventory_treasure_crab
+                width: parent.width
+                height: parent.height
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                anchors.leftMargin: 0
+                orientation: ListView.Horizontal
+                spacing: 10
+                clip: true
+                model: ["qrc:/img/img/Crab_common.png", "qrc:/img/img/Crab_uncommon.png",
+                "qrc:/img/img/Crab_rare.png", "qrc:/img/img/Crab_mythical.png", "qrc:/img/img/Crab_epic.png",
+                "qrc:/img/img/Crab_legendary.png", "qrc:/img/img/Crab_immortal.png", "qrc:/img/img/Crab_silver.png",
+                "qrc:/img/img/Crab_gold.png"]
+                delegate:
+                    Rectangle
+                    {
+                        width: ListView.view.width / 4
+                        height: ListView.view.width / 4
+                        border.width: 3
+                        radius: 20
+                        border.color: "black"
+                        Image
+                        {
+                            width: parent.width * 0.8
+                            height: parent.width * 0.8
+                            anchors.top: parent.top
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            source: modelData
+                        }
+                        Text
+                        {
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 5
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            text: qsTr("12345")
+                        }
+                    }
+            }
+
+            ListView
+            {
+                id: inventory_treasure_jellyfish
+                width: parent.width
+                height: parent.height
+                anchors.top: parent.top
+                anchors.topMargin: 100
+                orientation: ListView.Horizontal
+                spacing: 10
+                clip: true
+                model: ["qrc:/img/img/Jellyfish_common.png", "qrc:/img/img/Jellyfish_uncommon.png",
+                "qrc:/img/img/Jellyfish_rare.png", "qrc:/img/img/Jellyfish_mythical.png", "qrc:/img/img/Jellyfish_epic.png",
+                "qrc:/img/img/Jellyfish_legendary.png", "qrc:/img/img/Jellyfish_immortal.png", "qrc:/img/img/Jellyfish_silver.png",
+                "qrc:/img/img/Jellyfish_gold.png"]
+                delegate:
+                    Rectangle
+                    {
+                        width: ListView.view.width / 4
+                        height: ListView.view.width / 4
+                        border.width: 3
+                        radius: 20
+                        border.color: "black"
+                        Image
+                        {
+                            width: parent.width * 0.8
+                            height: parent.width * 0.8
+                            anchors.top: parent.top
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            source: modelData
+                        }
+                        Text
+                        {
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 5
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            text: qsTr("12345")
+                        }
+                    }
+            }
+
+        }
     }
 
     Connections
@@ -489,3 +584,8 @@ Designer {
     D{i:0;autoSize:true;formeditorZoom:0.01;height:480;width:400}
 }
 ##^##*/
+
+
+/*
+
+  */

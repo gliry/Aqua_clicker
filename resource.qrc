@@ -11,6 +11,33 @@
         <file>img/Snail.png</file>
         <file>img/Chest.png</file>
         <file>img/Exit.png</file>
+        <file>img/Crab_common.png</file>
+        <file>img/Crab_epic.png</file>
+        <file>img/Crab_gold.png</file>
+        <file>img/Crab_immortal.png</file>
+        <file>img/Crab_legendary.png</file>
+        <file>img/Crab_mythical.png</file>
+        <file>img/Crab_rare.png</file>
+        <file>img/Crab_silver.png</file>
+        <file>img/Crab_uncommon.png</file>
+        <file>img/Jellyfish_common.png</file>
+        <file>img/Jellyfish_epic.png</file>
+        <file>img/Jellyfish_gold.png</file>
+        <file>img/Jellyfish_immortal.png</file>
+        <file>img/Jellyfish_legendary.png</file>
+        <file>img/Jellyfish_mythical.png</file>
+        <file>img/Jellyfish_rare.png</file>
+        <file>img/Jellyfish_silver.png</file>
+        <file>img/Jellyfish_uncommon.png</file>
+        <file>img/Shrimp_common.png</file>
+        <file>img/Shrimp_epic.png</file>
+        <file>img/Shrimp_gold.png</file>
+        <file>img/Shrimp_immortal.png</file>
+        <file>img/Shrimp_legendary.png</file>
+        <file>img/Shrimp_mythical.png</file>
+        <file>img/Shrimp_rare.png</file>
+        <file>img/Shrimp_silver.png</file>
+        <file>img/Shrimp_uncommon.png</file>
     </qresource>
     <qresource prefix="/font"/>
 </RCC>
