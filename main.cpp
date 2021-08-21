@@ -5,6 +5,7 @@
 #include <QTranslator>
 #include <QQuickView>
 #include <QObject>
+#include <QRandomGenerator>
 #include "AppCore.h"
 
 int main(int argc, char *argv[])
@@ -26,6 +27,7 @@ int main(int argc, char *argv[])
     }
 
     AppCore appCore;
+
 
     QQmlApplicationEngine engine;
     QQmlContext *context = engine.rootContext();

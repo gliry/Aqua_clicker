@@ -1,5 +1,9 @@
 #include "AppCore.h"
 #include <cstdlib>
+#include <QRandomGenerator>
+#include <QDebug>
+
+QRandomGenerator *random_generator = QRandomGenerator::global();
 
 AppCore::AppCore(QObject* parent) : QObject(parent)
 {
@@ -13,7 +17,7 @@ void AppCore::receiveFromQml()
     if (m_counter >  life)
     {
         m_counter = 0;
-        int id_new_monster = rand() % 4;
+        int id_new_monster = randomize_monster();
         name_new_monster = monster_data[id_new_monster].first;
         life = monster_data[id_new_monster].second;
         emit monsterKilled(name_new_monster);
@@ -31,4 +35,24 @@ void AppCore::set_counter_change(int new_counter_change)
     counter_change = new_counter_change;
 }
 
-
+int AppCore::randomize_monster()
+{
+    int number = random_generator->bounded(1, 100);
+    qDebug() << number;
+    if (number < 50)
+    {
+        return 0; // Crab
+    }
+    else if (number < 75)
+    {
+        return 1; // Jellyfish
+    }
+    else if (number < 90)
+    {
+        return 2; // Shrimp
+    }
+    else
+    {
+        return 3; // Snail
+    }
+}

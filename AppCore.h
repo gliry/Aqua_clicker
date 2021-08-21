@@ -20,9 +20,12 @@ public slots:
     void receiveFromQml();
 
 private:
+    int randomize_monster();
+
     unsigned long long m_counter {0};
     unsigned long long life {0};
     unsigned long long counter_change {1};
+    int random_number {0};
     QString name_new_monster;
     QVector<QPair<QString, unsigned long long>> monster_data;
 };

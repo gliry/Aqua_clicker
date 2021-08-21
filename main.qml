@@ -41,6 +41,7 @@ ApplicationWindow
             lifeSpan: 12000
             sizeVariation: 16
             emitRate: 10
+            startTime: 10000
             velocity:
                 AngleDirection
                 {
@@ -72,6 +73,7 @@ ApplicationWindow
             lifeSpan: 12000
             sizeVariation: 16
             emitRate: 10
+            startTime: 10000
             velocity:
                 AngleDirection
                 {
@@ -87,10 +89,11 @@ ApplicationWindow
         id: monster_item
         width: parent.width
         height: parent.width
+        z: 3
         Button
         {
             id: monster_btn
-
+            enabled: true
             width: parent.width
             height: parent.width
             anchors.verticalCenter: parent.verticalCenter
@@ -178,8 +181,13 @@ ApplicationWindow
             id: killing_animation
             ScriptAction
             {
-                script: infinity_animation.pause()
+                script:
+                {
+                    infinity_animation.pause()
+                    monster_btn.enabled = false
+                }
             }
+
 
             ParallelAnimation
             {
@@ -232,6 +240,7 @@ ApplicationWindow
                 }
             }
         }
+
         SequentialAnimation
         {
             id: creating_animation
@@ -282,8 +291,240 @@ ApplicationWindow
             }
             ScriptAction
             {
-                script: infinity_animation.resume()
+                script:
+                {
+                    infinity_animation.resume()
+                    monster_btn.enabled = true
+                }
             }
+        }
+    }
+
+    Item
+    {
+        id: chest_item
+        width: parent.width / 3
+        height: parent.width / 3
+        anchors.right: background.right
+        anchors.bottom: background.bottom
+        anchors.bottomMargin: 0
+        anchors.rightMargin: 20
+        z: 2
+
+        Button
+        {
+            id: chest_btn
+            enabled: true
+            width: parent.width
+            height: parent.width
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            Image
+            {
+                id: chest_img
+                anchors.fill: parent
+                source: "qrc:/img/img/Chest.png"
+            }
+            transformOrigin: Item.Center
+            background: transientParent
+            onClicked:
+            {
+                inventory.visible = true
+                monster_btn.enabled = false
+                counter_points.visible = false
+                timer_chest_anim.running = false
+            }
+        }
+
+        SequentialAnimation
+        {
+            id: chest_anim
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: 0; to: 20
+                duration: 200
+            }
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: 20; to: -20
+                duration: 200
+            }
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: -20; to: 20
+                duration: 200
+            }
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: 20; to: -20
+                duration: 200
+            }
+
+            NumberAnimation {
+                target: chest_item
+                property: "rotation"
+                from: -20; to: 0
+                duration: 200
+            }
+        }
+    }
+
+    Item
+    {
+        Timer
+        {
+            id: timer_chest_anim
+            interval: 5000; running: true; repeat: true
+            onTriggered: chest_anim.running = true
+        }
+    }
+
+
+
+    Rectangle
+    {
+        id: inventory
+        width: parent.width * 0.9
+        height: parent.height * 0.95
+        color: "white"
+        opacity: 0.8
+        visible: false
+        border.width: 4
+        anchors.verticalCenter: background.verticalCenter
+        anchors.horizontalCenter: background.horizontalCenter
+        radius: 40
+        z: 4
+
+        Button
+        {
+            id: exit_btn
+            enabled: true
+            width: parent.width / 7
+            height: parent.width / 7
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.rightMargin: 20
+            anchors.topMargin: 20
+
+            Image
+            {
+                id: exit_img
+                anchors.fill: parent
+                source: "qrc:/img/img/Exit.png"
+            }
+            transformOrigin: Item.Center
+            background: transientParent
+            onClicked:
+            {
+                inventory.visible = false
+                monster_btn.enabled = true
+                counter_points.visible = true
+                timer_chest_anim.running = true
+            }
+        }
+
+        Rectangle
+        {
+            id: rect_tresure
+            width: parent.width * 0.9
+            height: parent.height * 0.9 - 19
+            color: "transparent"
+            radius: 20
+            anchors.top: parent.top
+            anchors.topMargin: 80
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            ListView
+            {
+                id: inventory_treasure_crab
+                width: parent.width
+                height: parent.height
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.topMargin: 0
+                anchors.leftMargin: 0
+                orientation: ListView.Horizontal
+                spacing: 10
+                clip: true
+                model: ["qrc:/img/img/Crab_common.png", "qrc:/img/img/Crab_uncommon.png",
+                "qrc:/img/img/Crab_rare.png", "qrc:/img/img/Crab_mythical.png", "qrc:/img/img/Crab_epic.png",
+                "qrc:/img/img/Crab_legendary.png", "qrc:/img/img/Crab_immortal.png", "qrc:/img/img/Crab_silver.png",
+                "qrc:/img/img/Crab_gold.png"]
+                delegate:
+                    Rectangle
+                    {
+                        width: ListView.view.width / 4
+                        height: ListView.view.width / 4
+                        border.width: 3
+                        radius: 20
+                        border.color: "black"
+                        Image
+                        {
+                            width: parent.width * 0.8
+                            height: parent.width * 0.8
+                            anchors.top: parent.top
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            source: modelData
+                        }
+                        Text
+                        {
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 5
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            text: qsTr("12345")
+                        }
+                    }
+            }
+
+            ListView
+            {
+                id: inventory_treasure_jellyfish
+                width: parent.width
+                height: parent.height
+                anchors.top: parent.top
+                anchors.topMargin: 100
+                orientation: ListView.Horizontal
+                spacing: 10
+                clip: true
+                model: ["qrc:/img/img/Jellyfish_common.png", "qrc:/img/img/Jellyfish_uncommon.png",
+                "qrc:/img/img/Jellyfish_rare.png", "qrc:/img/img/Jellyfish_mythical.png", "qrc:/img/img/Jellyfish_epic.png",
+                "qrc:/img/img/Jellyfish_legendary.png", "qrc:/img/img/Jellyfish_immortal.png", "qrc:/img/img/Jellyfish_silver.png",
+                "qrc:/img/img/Jellyfish_gold.png"]
+                delegate:
+                    Rectangle
+                    {
+                        width: ListView.view.width / 4
+                        height: ListView.view.width / 4
+                        border.width: 3
+                        radius: 20
+                        border.color: "black"
+                        Image
+                        {
+                            width: parent.width * 0.8
+                            height: parent.width * 0.8
+                            anchors.top: parent.top
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            source: modelData
+                        }
+                        Text
+                        {
+                            anchors.bottom: parent.bottom
+                            anchors.bottomMargin: 5
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            text: qsTr("12345")
+                        }
+                    }
+            }
+
         }
     }
 
@@ -304,9 +545,10 @@ ApplicationWindow
 
     Item
     {
-        id: item1
+        id: counter_points
         width: parent.width
         height: 50
+        visible: true
 
         Label
         {
@@ -342,3 +584,8 @@ Designer {
     D{i:0;autoSize:true;formeditorZoom:0.01;height:480;width:400}
 }
 ##^##*/
+
+
+/*
+
+  */
